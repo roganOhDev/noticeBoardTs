@@ -2,21 +2,21 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.port = void 0;
+const app_1 = require("../app");
 /**
  * Module dependencies.
  */
-const app = require('../app');
 const debug = require('debug')('noticeboardts:server');
 const http = require('http');
 /**
  * Get port from environment and store in Express.
  */
 exports.port = normalizePort(process.env.PORT || '3000');
-app.set('port', exports.port);
+app_1.app.set('port', exports.port);
 /**
  * Create HTTP server.
  */
-const server = http.createServer(app);
+const server = http.createServer(app_1.app);
 /**
  * Listen on provided port, on all network interfaces.
  */
